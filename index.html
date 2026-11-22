@@ -3,9 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cherry Pick</title>
+<title>Cherry Pick · Brands for creators, behind the doors</title>
 <meta name="description" content="Cherry Pick builds brands for creators, from the name and labels to production, stock and shipping. Active in the US and UK.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='white'/%3E%3Cpath d='M28 30C29 20 35 12 44 8' stroke='%23140B0C' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M44 8C50 4 58 7 60 13C53 17 47 14 44 8Z' fill='%232E7D4F'/%3E%3Ccircle cx='28' cy='44' r='17' fill='%23B3122B'/%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#B3122B">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cherry Pick">
+<meta property="og:title" content="Cherry Pick. You're the star. We're the crew.">
+<meta property="og:description" content="We build brands for creators, from the name and labels to production, stock and shipping. Active in the US and UK.">
+<meta property="og:image" content="https://cherrypickagency.com/og.png">
+<meta property="og:url" content="https://cherrypickagency.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cherrypickagency.com/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -165,9 +178,67 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .steps li, .steps li + li { padding-left: 0; border-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+
+/* ---- finishing details ---- */
+::selection { background: var(--cherry); color: #fff; }
+body::after { content:""; position:fixed; inset:0; pointer-events:none; z-index:50; opacity:.07; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"); }
+#prog { position:fixed; top:0; left:0; height:3px; width:0; background:var(--cherry); z-index:60; transition:width .1s linear; }
+.ticker { background:var(--ink); color:var(--bone); overflow:hidden; white-space:nowrap; border-bottom:1px solid #3a2a2c; }
+.ticker .track { display:inline-flex; gap:0; animation: tick 46s linear infinite; padding:9px 0; }
+.ticker span { font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; padding:0 26px; display:inline-flex; align-items:center; gap:52px; }
+.ticker span::after { content:""; width:6px; height:6px; border-radius:50%; background:var(--cherry); }
+@keyframes tick { to { transform: translateX(-50%); } }
+.ticker:hover .track { animation-play-state: paused; }
+.reel { position:absolute; right:24px; top:44px; z-index:2; text-align:right; color:rgba(241,236,230,.75); line-height:1.7; animation: rise .9s ease 2.1s both; }
+.seal { position:absolute; right:max(24px, calc((100vw - 1120px)/2 + 24px)); bottom:72px; width:150px; height:150px; z-index:2; animation: rise .9s ease 2.2s both; }
+.seal svg { width:100%; height:100%; animation: spin 38s linear infinite; }
+.seal .core { position:absolute; inset:0; display:grid; place-items:center; }
+.seal .core svg { width:46px; height:46px; animation:none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.stats { background:var(--bone); border-bottom:1px solid var(--line); }
+.stats .wrap { display:grid; grid-template-columns:repeat(4,1fr); }
+.stats .c { padding:26px 22px 24px 0; }
+.stats .c + .c { padding-left:22px; border-left:1px solid var(--line); }
+.stats b { display:block; font-family:var(--display); font-size:clamp(34px,4.6vw,54px); line-height:1; letter-spacing:-.02em; color:var(--cherry); font-weight:700; }
+.stats small { display:block; margin-top:8px; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--mute); }
+.scene { display:flex; align-items:center; gap:14px; margin-bottom:22px; }
+.scene .eyebrow { margin:0; }
+.scene::before { content:""; width:34px; height:1px; background:currentColor; opacity:.5; }
+.scene .no { font-family:var(--mono); font-size:11px; letter-spacing:.2em; color:var(--mute); text-transform:uppercase; }
+.credits .scene .no { color:#8f817e; }
+.credits { position:relative; overflow:hidden; --mx:50%; --my:20%; }
+.credits::before { content:""; position:absolute; inset:0; pointer-events:none; background: radial-gradient(520px circle at var(--mx) var(--my), rgba(179,18,43,.22), transparent 62%); }
+.credits .wrap { position:relative; }
+.roll li { transition: padding-left .25s ease, background .25s ease; }
+.roll li:hover { padding-left:14px; background:rgba(255,255,255,.03); }
+.roll .idx { font-family:var(--mono); font-size:11px; color:#8f817e; letter-spacing:.14em; margin-right:16px; }
+.rv { opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); transition-delay:calc(var(--i,0) * 70ms); }
+.rv.in { opacity:1; transform:none; }
+.steps li { transition: background .25s ease; } .steps li:hover h3 { color:var(--cherry); }
+.faq { background:#fff; border-top:1px solid var(--line); }
+.faq details { border-bottom:1px solid var(--line); }
+.faq details:first-of-type { border-top:1px solid var(--line); }
+.faq summary { list-style:none; cursor:pointer; padding:20px 44px 20px 0; position:relative; font-family:var(--display); font-size:clamp(20px,2.6vw,28px); line-height:1.15; letter-spacing:-.01em; }
+.faq summary::-webkit-details-marker { display:none; }
+.faq summary::after { content:"+"; position:absolute; right:6px; top:50%; transform:translateY(-52%); font-family:var(--mono); font-size:26px; color:var(--cherry); transition:transform .25s ease; }
+.faq details[open] summary::after { transform:translateY(-52%) rotate(45deg); }
+.faq details p { padding:0 44px 22px 0; color:var(--mute); max-width:62ch; }
+.faqwrap { display:grid; grid-template-columns: 5fr 7fr; gap:56px; align-items:start; }
+.foot2 { display:grid; grid-template-columns: 2fr 1fr 1fr; gap:36px; padding-bottom:30px; border-bottom:1px solid #3a2a2c; margin-bottom:22px; }
+.foot2 h4 { font-family:var(--mono); font-weight:400; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#E3485F; margin-bottom:12px; }
+.foot2 p, .foot2 a { color:#BDB1AE; font-size:15px; display:block; text-decoration:none; line-height:1.9; }
+.foot2 a:hover { color:#fff; }
+.foot2 .big { font-family:var(--display); font-style:italic; font-size:30px; color:var(--bone); line-height:1.1; max-width:16ch; margin-bottom:10px; }
+footer .wrap { display:block; }
+footer .row2 { display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; }
+@media (max-width:820px){ .stats .wrap{grid-template-columns:1fr 1fr} .stats .c:nth-child(3){padding-left:0;border-left:0} .reel,.seal{display:none} .faqwrap{grid-template-columns:1fr;gap:28px} .foot2{grid-template-columns:1fr 1fr} .foot2 > div:first-child{grid-column:1/-1} }
+@media (prefers-reduced-motion: reduce){ .ticker .track,.seal svg{animation:none} .rv{opacity:1;transform:none;transition:none} .reel,.seal{animation:none} }
 </style>
 </head>
 <body>
+<div id="prog" aria-hidden="true"></div>
+<div class="ticker" aria-hidden="true"><div class="track"><span>Now casting creators</span><span>Behind the doors</span><span>United States &amp; United Kingdom</span><span>A to Z, uncredited</span><span>Est. 1999</span> <span>Now casting creators</span><span>Behind the doors</span><span>United States &amp; United Kingdom</span><span>A to Z, uncredited</span><span>Est. 1999</span><span>Now casting creators</span><span>Behind the doors</span><span>United States &amp; United Kingdom</span><span>A to Z, uncredited</span><span>Est. 1999</span> <span>Now casting creators</span><span>Behind the doors</span><span>United States &amp; United Kingdom</span><span>A to Z, uncredited</span><span>Est. 1999</span></div></div>
 
 <header class="nav">
   <div class="wrap">
@@ -185,6 +256,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <li><a class="l" href="#history">History</a></li>
         <li><a class="l" href="#credits">What we do</a></li>
         <li><a class="l" href="#how">How it works</a></li>
+        <li><a class="l" href="#faq">Questions</a></li>
         <li><a class="l" href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -203,7 +275,20 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <a class="ghost" href="#credits">See what we handle</a>
     </div>
   </div>
+  <div class="seal" aria-hidden="true">
+    <svg viewBox="0 0 200 200"><defs><path id="ring" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+      <circle cx="100" cy="100" r="96" fill="none" stroke="#F1ECE6" stroke-opacity=".45"/><circle cx="100" cy="100" r="60" fill="none" stroke="#F1ECE6" stroke-opacity=".3"/>
+      <text font-family="DM Mono, monospace" font-size="12" fill="#F1ECE6"><textPath href="#ring" textLength="484" lengthAdjust="spacing">CHERRY PICK · BEHIND THE DOORS · 27 YEARS ·</textPath></text></svg>
+    <div class="core"><svg viewBox="0 0 64 64"><path d="M26 33C27 22 34 13 45 8" fill="none" stroke="#F1ECE6" stroke-width="4.5" stroke-linecap="round"/><path d="M45 8C51 3 60 6 62 13C54 18 48 15 45 8Z" fill="#F1ECE6"/><circle cx="26" cy="43" r="19" fill="#F1ECE6"/></svg></div>
+  </div>
 </div>
+
+<div class="stats"><div class="wrap">
+  <div class="c"><b>27</b><small>Years behind the scenes</small></div>
+  <div class="c"><b>2</b><small>Markets, US &amp; UK</small></div>
+  <div class="c"><b>3</b><small>Categories: knit, woven, active</small></div>
+  <div class="c"><b>1</b><small>Star. You.</small></div>
+</div></div>
 
 <section id="history">
   <div class="wrap two">
@@ -212,7 +297,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <p class="mono years">Years in the business</p>
     </div>
     <div class="copy">
-      <span class="eyebrow mono">History</span>
+      <div class="scene"><span class="no">Scene 01</span><span class="eyebrow mono">History</span></div>
       <h2>Twenty-seven years, <em>no credits.</em></h2>
       <p style="margin-top:28px">For 27 years we have made clothes for other people's brands. We design them, source them, produce them and get them delivered. Our names were never on the label, and that was the job.</p>
       <p>Today we do the same work for the people who built the audience. We don't put ourselves in front. We put your brand out, and the whole show behind it is ours.</p>
@@ -222,32 +307,32 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 <section class="credits" id="credits">
   <div class="wrap">
-    <span class="eyebrow mono">From A to Z</span>
+    <div class="scene"><span class="no">Scene 02</span><span class="eyebrow mono">From A to Z</span></div>
     <h2>The full production, <em>uncredited.</em></h2>
     <p class="sub">Branding to labels to the finished product. You never chase a factory, a supplier or a courier. We run all of it.</p>
     <div class="starring"><span class="role">Starring</span><span class="by">You</span></div>
     <ul class="roll">
-      <li><span class="role">Brand name &amp; identity</span><span class="by">Cherry Pick</span></li>
-      <li><span class="role">Logo &amp; visual direction</span><span class="by">Cherry Pick</span></li>
-      <li><span class="role">Product design &amp; patterns</span><span class="by">Cherry Pick</span></li>
-      <li><span class="role">Fabrics, trims &amp; sampling</span><span class="by">Cherry Pick</span></li>
-      <li><span class="role">Labels, hangtags &amp; packaging</span><span class="by">Cherry Pick</span></li>
-      <li><span class="role">Production &amp; quality control</span><span class="by">Cherry Pick</span></li>
-      <li><span class="role">Stock &amp; warehousing</span><span class="by">Cherry Pick</span></li>
-      <li><span class="role">Orders, shipping &amp; returns</span><span class="by">Cherry Pick</span></li>
+      <li class="rv" style="--i:0"><span class="role"><span class="idx">01</span>Brand name &amp; identity</span><span class="by">Cherry Pick</span></li>
+      <li class="rv" style="--i:1"><span class="role"><span class="idx">02</span>Logo &amp; visual direction</span><span class="by">Cherry Pick</span></li>
+      <li class="rv" style="--i:2"><span class="role"><span class="idx">03</span>Product design &amp; patterns</span><span class="by">Cherry Pick</span></li>
+      <li class="rv" style="--i:3"><span class="role"><span class="idx">04</span>Fabrics, trims &amp; sampling</span><span class="by">Cherry Pick</span></li>
+      <li class="rv" style="--i:4"><span class="role"><span class="idx">05</span>Labels, hangtags &amp; packaging</span><span class="by">Cherry Pick</span></li>
+      <li class="rv" style="--i:5"><span class="role"><span class="idx">06</span>Production &amp; quality control</span><span class="by">Cherry Pick</span></li>
+      <li class="rv" style="--i:6"><span class="role"><span class="idx">07</span>Stock &amp; warehousing</span><span class="by">Cherry Pick</span></li>
+      <li class="rv" style="--i:7"><span class="role"><span class="idx">08</span>Orders, shipping &amp; returns</span><span class="by">Cherry Pick</span></li>
     </ul>
   </div>
 </section>
 
 <section id="how">
   <div class="wrap">
-    <span class="eyebrow mono">How it works</span>
+    <div class="scene"><span class="no">Scene 03</span><span class="eyebrow mono">How it works</span></div>
     <h2>Four steps. <em>Only one is yours.</em></h2>
     <ol class="steps">
-      <li><span class="n">01</span><h3>We talk</h3><p>Your audience, your taste, your price level. We shape the brand around who follows you.</p></li>
-      <li><span class="n">02</span><h3>We build</h3><p>Name, look, labels and a first small collection, ready for you to approve.</p></li>
-      <li><span class="n">03</span><h3>We make</h3><p>We produce, stock and ship every order. We carry the stock, so you don't.</p></li>
-      <li><span class="n">04</span><h3>You promote</h3><p>You do what you already do best. You earn on every piece that sells.</p></li>
+      <li class="rv" style="--i:0"><span class="n">01</span><h3>We talk</h3><p>Your audience, your taste, your price level. We shape the brand around who follows you.</p></li>
+      <li class="rv" style="--i:1"><span class="n">02</span><h3>We build</h3><p>Name, look, labels and a first small collection, ready for you to approve.</p></li>
+      <li class="rv" style="--i:2"><span class="n">03</span><h3>We make</h3><p>We produce, stock and ship every order. We carry the stock, so you don't.</p></li>
+      <li class="rv" style="--i:3"><span class="n">04</span><h3>You promote</h3><p>You do what you already do best. You earn on every piece that sells.</p></li>
     </ol>
   </div>
 </section>
@@ -263,7 +348,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 <section id="markets">
   <div class="wrap two">
     <div>
-      <span class="eyebrow mono">Where we work</span>
+      <div class="scene"><span class="no">Scene 04</span><span class="eyebrow mono">Where we work</span></div>
       <h2>Active in the <em>US and UK.</em></h2>
       <div class="mk"><span>United States</span><span>United Kingdom</span></div>
     </div>
@@ -279,9 +364,26 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   </div>
 </section>
 
+<section class="faq" id="faq">
+  <div class="wrap faqwrap">
+    <div>
+      <div class="scene"><span class="no">Intermission</span><span class="eyebrow mono">Questions</span></div>
+      <h2>Asked <em>backstage.</em></h2>
+    </div>
+    <div>
+      <details><summary>Do I need to know anything about making clothes?</summary><p>No. You bring the audience and the taste. We handle design, sampling, labels, production and delivery, and we explain every step in plain words.</p></details>
+      <details><summary>Who carries the stock and the risk?</summary><p>We do. We produce, store and ship, so you are never sitting on boxes in a spare room. How earnings are shared is agreed with you in writing before anything is made.</p></details>
+      <details><summary>Do I need a big following?</summary><p>You need an engaged one. Followers who already ask what you wear matter more than a number. Tell us your size, country and age range and we will say honestly what we think.</p></details>
+      <details><summary>Will my customers know Cherry Pick is behind it?</summary><p>Only if you want them to. It is your brand, your name and your labels. We stay behind the doors.</p></details>
+      <details><summary>How long does a first collection take?</summary><p>It depends on the pieces and the season, so we plan backwards from your launch date. Most first collections are a small, focused drop rather than a whole range.</p></details>
+      <details><summary>Where do you ship from and to?</summary><p>We are active in the United States and the United Kingdom, and we plan stock and shipping around where your audience lives.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="wrap">
-    <span class="eyebrow mono">Contact</span>
+    <div class="scene"><span class="no">Final scene</span><span class="eyebrow mono">Contact</span></div>
     <h2>Ready for <em>the show?</em></h2>
     <p style="margin-top:22px;max-width:46ch">Tell us who you are and where your audience is. We reply personally.</p>
     <div class="ask">
@@ -325,8 +427,12 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 <footer>
   <div class="wrap">
-    <span class="mono">Cherry Pick</span>
-    <span class="mono">Behind the doors · United States &amp; United Kingdom</span>
+    <div class="foot2">
+      <div><p class="big">You're the star. We're the crew.</p><p>Brands for creators, built behind the doors.</p></div>
+      <div><h4>Explore</h4><a href="#history">History</a><a href="#credits">What we do</a><a href="#how">How it works</a><a href="#faq">Questions</a></div>
+      <div><h4>Talk to us</h4><a href="#contact">Start your brand</a><a id="fmail" href="#">hello@cherrypickagency.com</a><p>United States &amp; United Kingdom</p></div>
+    </div>
+    <div class="row2"><span class="mono">© 2026 Cherry Pick</span><span class="mono">Behind the doors · Est. 1999</span></div>
   </div>
 </footer>
 <script>
@@ -354,6 +460,18 @@ var CONTACT_EMAIL = "hello@cherrypickagency.com";
     en.forEach(function (x) { if (x.isIntersecting) { pr.classList.remove("pre"); io.disconnect(); } });
   }, { threshold: 0.45 });
   io.observe(pr);
+})();
+
+(function(){
+  var f=document.getElementById("fmail"); if(f){f.textContent=CONTACT_EMAIL; f.href="mailto:"+CONTACT_EMAIL;}
+  var p=document.getElementById("prog");
+  function pg(){var h=document.documentElement; var m=h.scrollHeight-h.clientHeight; p.style.width=(m>0?h.scrollTop/m*100:0)+"%";}
+  addEventListener("scroll",pg,{passive:true}); pg();
+  var rv=[].slice.call(document.querySelectorAll(".rv"));
+  if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches){rv.forEach(function(e){e.classList.add("in")});}
+  else{var o=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target);}})},{threshold:.2}); rv.forEach(function(e){o.observe(e)});}
+  var c=document.getElementById("credits");
+  if(c&&!matchMedia("(prefers-reduced-motion: reduce)").matches){c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(); c.style.setProperty("--mx",(e.clientX-r.left)+"px"); c.style.setProperty("--my",(e.clientY-r.top)+"px");});}
 })();
 </script>
 
